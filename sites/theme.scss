@@ -53,6 +53,8 @@
 @import "../templates/mobile-centre/base";
 @import "../components/utilities/glyphicon-error";
 @import "../templates/campaign/base";
+@import "../templates/institutional/base";
+@import "../templates/theme-topic/base";
 @import "../components/baseline/base";
 @import "../components/base";
 @import "../components/wb5-click-postback/base";
@@ -110,6 +112,7 @@
 	@import "gcweb-menu/screen-sm-max";
 	@import "../components/gc-subway/screen-sm-max";
 	@import "../components/gc-table/screen-sm-max"; // Provisional CSS for GC table
+	@import "../templates/institutional/screen-sm-max"
 	@import "../misc/variant-default/variant-screen-sm-max";
 }
 
