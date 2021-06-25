@@ -1,17 +1,20 @@
 /* Provisional featured link component */
 
-.provisional.gc-featured-link {
+.gc-featured-link {
 	background-color: $bg-gctheme;
-	opacity: .9;
-	padding-bottom: $space-md;
-	padding-top: $space-md;
 
-	p, a {
-		color: #fff;
-	}
+	&.provisional {
+		font-weight: $bold-weight;
+		opacity: .9;
+		padding-bottom: $space-md;
+		padding-top: $space-md;
 
-	p {
-		float: left !important;
-		margin-bottom: $space-0;
+		p, a {
+			color: #fff;
+		}
+
+		p {
+			margin-bottom: $space-0;
+		}
 	}
 }
