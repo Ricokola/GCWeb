@@ -1,13 +1,14 @@
 ---
-title: "Page de contenu"
+title: "Page de test"
 language: fr
-altLangPrefix: content
-altLangPage: content-en.html
+category: templates
+altLangPrefix: test
+altLangPage: test-en.html
 breadcrumb:
 - title: "Canada.ca"
   link: https://www.canada.ca/fr.html
 secondlevel: false
-dateModified: 2017-09-29
+dateModified: 2022-02-06
 share: true
 ---
 {% include components/inc-byline.html %}
