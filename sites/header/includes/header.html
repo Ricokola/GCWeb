@@ -1,0 +1,39 @@
+<header>
+	<div id="wb-bnr" class="container">
+		<div class="row">
+			{% if page.altLangPage %}
+				{% include language/inc-languagetoggle.html %}
+			{% endif %}
+			{% include headers-includes/brand.html %}
+			{% unless page.nositesearch %}
+				{% include headers-includes/sitesearch.html %}
+			{% endunless %}
+		</div>
+	</div>
+	<hr>
+	<div class="container">
+		<div class="row">
+			{%- unless page.nomenu -%}
+				{%- if page.auth -%}
+					<div class="col-sm-9">
+						{% include gcweb-menu/sitemenu.html %}
+					</div>
+				{%- else -%}
+					<div class="col-xs-12">
+						{% include gcweb-menu/sitemenu.html %}
+					</div>
+				{%- endif -%}
+			{%- endunless -%}
+			{%- if page.auth and page.nomenu -%}
+				<div class="col-xs-12">
+					{% include authentication/authentication.html %}
+				</div>
+			{%- elsif page.auth -%}
+				<div class="col-xs-5 col-xs-offset-7 col-sm-offset-0 col-sm-3">
+					{% include authentication/authentication.html %}
+				</div>
+			{%- endif -%}
+		</div>
+	</div>
+	{% include breadcrumbs/inc-breadcrumbs.html %}
+</header>

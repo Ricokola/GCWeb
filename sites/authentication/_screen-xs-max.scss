@@ -1,0 +1,15 @@
+/*
+ * Specific classes for authentication section which include Sign-on/Sign-off button and the Contextual Sign-in button.
+ */
+
+#wb-bnr + hr + .container {
+	.col-sm-9 {
+		.gcweb-menu [role=menu] {
+			margin-bottom: 50px;
+		}
+	}
+
+	.col-xs-5 {
+		margin-top: -50px;
+	}
+}
