@@ -35,9 +35,6 @@
 	}
 
 	input {
-		border-color: #e0e0e0;
-		border-style: solid;
-		box-shadow: none;
 		color: #555;
 		position: relative;
 	}
@@ -76,4 +73,10 @@
 
 input#wb-srch-q {
 	width: 100%;
+}
+
+#wb-srch input:not(focus) {
+	border-color: #FFFF00;
+	border-style: solid;
+	box-shadow: none;
 }

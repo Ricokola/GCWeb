@@ -1,0 +1,231 @@
+{
+	"@context": {
+		"@version": 2.0,
+		"dct": "http://purl.org/dc/terms/",
+		"title": { "@id": "dct:title", "@container": "@language" },
+		"description": { "@id": "dct:description", "@container": "@language" },
+		"modified": "dct:modified"
+	},
+	"title": {
+		"en": "Site search field",
+		"fr": "Champ de recherche du site"
+	},
+	"description": {
+		"en": "Documentation on how to use the site search field.",
+		"fr": "Documentation sur l'utilisation du champ de recherche du site."
+	},
+	"modified": "2023-09-25",
+	"componentName": "search",
+	"status": "stable",
+	"version": "1.0.1",
+	"pages": {
+		"docs": [
+			{
+				"title": "Documentation for the site search field",
+				"language": "en",
+				"path": "search-docs-en.html"
+			},
+			{
+				"title": "Documentation pour le champ de recherche du site",
+				"language": "fr",
+				"path": "search-docs-fr.html"
+			}
+		],
+		"examples": [
+			{
+				"title": "Site search",
+				"language": "en",
+				"path": "assets/search-en.html"
+			},
+			{
+				"title": "Recherche du site",
+				"language": "fr",
+				"path": "assets/search-fr.html"
+			},
+			{
+				"title": "Contextual site search",
+				"language": "en",
+				"path": "assets/contextual-search-en.html"
+			},
+			{
+				"title": "Recherche du site contextuel",
+				"language": "fr",
+				"path": "assets/contextual-search-fr.html"
+			}
+		]
+	},
+	"dependencies": "Site Header",
+	"a11yGuidance": "no accessibility guidance",
+	"variations": [
+		{
+			"name": {
+				"en": "Search (default)",
+				"fr": "Recherche (par défaut)"
+			},
+			"status": "stable",
+			"description": {
+				"en": "The default search is an element of the global header. It allows people to search Government of Canada content using a simple search field.",
+				"fr": "Le champ de recherche par default est un élément de l’en-tête général. Il permet aux gens de lancer une recherche dans le contenu du gouvernement du Canada au moyen d’un champ de recherche simple."
+			},
+			"guidance": {
+				"en": "https://design.canada.ca/common-design-patterns/search-box.html",
+				"fr": "https://conception.canada.ca/configurations-conception-communes/champ-recherche.html"
+			},
+			"iteration": "_:iteration_srch_1",
+			"example": [
+				{
+					"en": { "href": "search-en.html", "text": "Site search field" },
+					"fr": { "href": "page-feedback-fr.html", "text": "Champ de recherche du site" }
+				}
+			],
+			"implementation": [
+				"_:implement_srch"
+			],
+			"history": [
+				{
+					"en": "August 2023 - Initial implementation of the variation.",
+					"fr": "Août 2023 - Implémentation initiale de la variante."
+				}
+			]
+		}
+	],
+	"implementation": [
+		{
+			"@id": "_:implement_srch",
+			"iteration": "_:iteration_srch_1",
+			"name": {
+				"en": "Standard",
+				"fr": "Standard"
+			},
+			"introduction": {
+				"en": "This implementation is included by default and part of the global header of Canada.ca.",
+				"fr": "Cette implémentation est incluse par défaut et fait partie intégrante de l'en-tête globale de Canada.ca aux développeurs/éditeurs qui ajoutent le composant manuellement."
+			},
+			"instructions": {
+				"en": [
+					""
+				],
+				"fr": [
+					""
+				]
+			},
+			"notes": {
+				"en": [
+					""
+				],
+				"fr": [
+					""
+				]
+			},
+			"sample": {
+				"en": [
+					{
+						"@type": "source-code",
+						"description": "Code sample:",
+						"code": ""
+					}
+				],
+				"fr": [
+					{
+						"@type": "source-code",
+						"description": "Exemple de code :",
+						"code": ""
+					}
+				]
+			}
+		}
+	],
+	"change set": [
+		{
+			"@id": "_:cs_srch_global",
+			"name": "Search global",
+			"status": "stable",
+			"baseOnIteration": "_:iteration_srch_1",
+			"detectableBy": "The search field is part of the global header of Canada.ca pages.",
+			"layout": [
+				"Part of the global header."
+			],
+			"style": [
+				"It is visually rendered as an input text field followed by a clickable magnifying glass icon on the right hand."
+			],
+			"semantic": {
+				"@type": "source-code",
+				"collapsed": true,
+				"description": "",
+				"code": {
+					"@type": [ "@id", "rdf:HTML" ],
+					"@value": ""
+				}
+			},
+			"logic": "Not applicable",
+			"behaviour": [
+				"Non-Canada.ca implementation - ",
+				"Canada.ca implementation - "
+			],
+			"guidance": [
+				"Canada.ca - ",
+				"Non Canada.ca - "
+			],
+			"context": "In the page details component, inside the main content of the page",
+			"configuration":[
+				"Form submission URL",
+				"Basic mode: URL of the feedback button"
+			],
+			"static": [
+				],
+			"schema": [
+				""
+			],
+			"dependency": [
+				""
+			],
+			"file": "Not applicable"
+		}
+	],
+	"iteration": [
+		{
+			"@id": "_:iteration_srch_1",
+			"name": "Site search field - Iteration 1",
+			"date": "2022-08",
+			"detectableBy": ".wb-srch",
+			"assets": [
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample for global search",
+					"code": {
+						"@type": [ "rdf:HTML", "@id" ],
+						"@value": "assets/search-en.html"
+					}
+				},
+				{
+					"@type": "source-code",
+					"@language": "en",
+					"description": "Code sample for contextual search",
+					"code": {
+						"@type": [ "rdf:HTML", "@id" ],
+						"@value": "assets/search-contextual-en.html"
+					}
+				},
+				{
+					"@type": "source-code",
+					"@language": "fr",
+					"description": "Exemple de code pour la recherche globale",
+					"code": {
+						"@type": [ "rdf:HTML", "@id" ],
+						"@value": "assets/search-contextual-fr.html"
+					}
+				},
+				{
+					"@type": "source-code",
+					"@language": "fr",
+					"description": "Exemple de code pour la recherche contextuelle",
+					"code": {
+						"@type": [ "rdf:HTML", "@id" ],
+						"@value": "assets/search-contextual-fr.html"
+					}
+				}
+			]
+		}
+	]
+}
