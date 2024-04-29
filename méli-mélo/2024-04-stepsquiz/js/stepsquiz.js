@@ -18,9 +18,12 @@ instances.forEach ( ( instance ) => {
 	// Calculate number of questions
 	let numQuestion = $( "fieldset", $instance ).length;
 
+	let progressCount = 100/numQuestion;
+
 	// Addition to UI (Ex: progress bar)
 	$( "form", $instance ).prepend( "<p class='progressText' role='status'></p>" );
 	$( "form", $instance ).prepend( "<p><progress class='progressBar' max='" + numQuestion + "'></progress></p>" );
+	$( "form", $instance ).prepend( "<div class='progress'><div class='progress-bar bg-success' role='progressbar' aria-valuenow='" + progressCount + "' aria-valuemin='" + progressCount + "' style='width: " + progressCount + "%' aria-valuemax='100'></div></div>" );
 
 });
 
@@ -56,6 +59,24 @@ var hideOtherSteps = function( e ) {
 
 	// Update progress bar
   	$progressBar.val( currentTabId );
+
+	// Experimentation - START
+	let $progressBar2 = $( ".progress-bar", steps );
+	let progressCount = $progressBar2.attr( "aria-valuemin" );
+  	var i = parseFloat(progressCount);
+    var bar = document.querySelector(".progress-bar", steps);
+
+    if( i < 100 ){
+    		console.log("i-1");
+			console.log(i);
+        i = i + i;
+        console.log("i-2");
+		console.log(i);
+        bar.style.width = i + "%";
+    }
+    // Experimentation - END
+
+
 
   	// Hide other steps that are not active
 	$( ".steps-wrapper", steps ).removeClass( "hidden" );
